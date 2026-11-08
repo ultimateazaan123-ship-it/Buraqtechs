@@ -27,7 +27,7 @@ export default function ServicesPage() {
 
       <ServicesRail />
 
-      <section className="band panel theme-volt">
+      <section className="band panel theme-light">
         <Marquee items={services.map((s) => s.title)} reverse outline />
       </section>
 

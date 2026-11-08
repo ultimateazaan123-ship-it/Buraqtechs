@@ -1,6 +1,7 @@
 "use client";
 
 import type { CSSProperties, ReactNode } from "react";
+import Trace from "./Trace";
 
 // Card with a border/background glow that tracks the pointer.
 export default function Spotlight({ children, className = "", delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
@@ -11,6 +12,7 @@ export default function Spotlight({ children, className = "", delay = 0 }: { chi
   };
   return (
     <div className={`spot ${className}`} onPointerMove={move} data-reveal style={{ "--d": delay } as CSSProperties}>
+      <Trace offset={delay / 60} />
       {children}
     </div>
   );

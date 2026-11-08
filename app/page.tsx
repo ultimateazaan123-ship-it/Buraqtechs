@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <HomeHero />
 
-      <section className="band panel theme-volt">
+      <section className="band panel theme-light">
         <Marquee items={services.map((s) => s.title)} />
       </section>
 
@@ -31,7 +31,7 @@ export default function Home() {
         <ServicesIndex />
       </section>
 
-      <section className="statement wrap panel theme-iris" aria-label="Our approach">
+      <section className="statement wrap panel theme-light tint" aria-label="Our approach">
         <p className="mono dim" data-reveal>(02) Approach</p>
         <ScrollText
           className="statement__text"

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { about } from "@/lib/content";
+import Trace from "./Trace";
 
 const ease = (t: number) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
 
@@ -43,6 +44,7 @@ export default function Counters() {
     <dl ref={ref} className="nums">
       {about.numbers.map((n, i) => (
         <div className="nums__item" key={n.label} data-reveal style={{ ["--d" as string]: i * 90 }}>
+          <Trace offset={i * 1.6} />
           <dt className="mono dim">
             0{i + 1} / {n.label}
           </dt>

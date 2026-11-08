@@ -3,6 +3,7 @@
 import { useRef, useState, type CSSProperties } from "react";
 import { services, type ServiceId } from "@/lib/content";
 import Glyph from "./Glyph";
+import Trace from "./Trace";
 import { TLink } from "./Transition";
 
 // Editorial index of services. Hovering a row fills it and floats a glyph card at the cursor.
@@ -46,6 +47,7 @@ export default function ServicesIndex() {
       </ol>
       <div ref={cardRef} className={`sidx__card${active ? " is-on" : ""}`} aria-hidden="true">
         <div className="sidx__cardin">
+          <Trace />
           {services.map((s) => (
             <Glyph key={s.id} id={s.id} className={active === s.id ? "is-shown" : ""} />
           ))}

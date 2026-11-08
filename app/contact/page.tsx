@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import CopyEmail from "@/components/CopyEmail";
 import Lines from "@/components/Lines";
 import PageHero from "@/components/PageHero";
+import Trace from "@/components/Trace";
 import { contact, site } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function ContactPage() {
         readout={["24×7", "Availability"]}
       />
 
-      <section className="contact wrap panel theme-light">
+      <section className="contact wrap panel theme-light tint">
         <div className="contact__form">
           <p className="mono dim" data-reveal>(Request)</p>
           <Lines className="h-md" lines={["Request"]} />
@@ -48,6 +49,7 @@ export default function ContactPage() {
           </div>
 
           <div className="radar" data-reveal="fade" style={{ ["--d" as string]: 240 }} aria-hidden="true">
+            <Trace offset={3} />
             <div className="radar__sweep" />
             <span className="radar__ring" />
             <span className="radar__ring" />

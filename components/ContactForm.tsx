@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { services, site } from "@/lib/content";
 import Magnetic from "./Magnetic";
+import Trace from "./Trace";
 
 // Composes the request into an email to the studio's inbox (no server required).
 export default function ContactForm() {
@@ -29,6 +30,7 @@ export default function ContactForm() {
 
   return (
     <form className="form" onSubmit={submit}>
+      <Trace />
       <fieldset className="form__chips">
         <legend className="mono dim">I&apos;m interested in</legend>
         {services.map((s) => (

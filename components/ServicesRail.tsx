@@ -4,6 +4,7 @@ import { useEffect, useRef, type CSSProperties } from "react";
 import { helpSubtitle, services } from "@/lib/content";
 import { useProgress } from "@/lib/useProgress";
 import Glyph from "./Glyph";
+import Trace from "./Trace";
 
 // Vertical scroll drives a horizontal track of service panels (desktop); stacks on small screens.
 export default function ServicesRail() {
@@ -54,7 +55,7 @@ export default function ServicesRail() {
   );
 
   return (
-    <section ref={sec} className="rail panel theme-iris" aria-labelledby="rail-h">
+    <section ref={sec} className="rail panel theme-light tint" aria-labelledby="rail-h">
       <div className="rail__pin">
         <div ref={track} className="rail__track">
           <div className="rail__intro">
@@ -81,6 +82,7 @@ export default function ServicesRail() {
               <h3 className="rail__title">{s.title}</h3>
               <p className="rail__text">{s.text}</p>
               <span className="rail__line" aria-hidden="true" />
+              <Trace offset={i * 1.2} />
             </article>
           ))}
         </div>

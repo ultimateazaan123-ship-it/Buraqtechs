@@ -25,12 +25,12 @@ export default function AboutPage() {
         readout={["6-D", "Process"]}
       />
 
-      <section className="quote wrap panel theme-iris" aria-label="Our belief">
+      <section className="quote wrap panel theme-light" aria-label="Our belief">
         <span className="quote__mark serif" aria-hidden="true">“</span>
         <ScrollText className="quote__text" text={about.quote} accent={[8, 9, 10, 11]} />
       </section>
 
-      <section className="split wrap panel theme-light">
+      <section className="split wrap panel theme-light tint">
         <div className="split__row">
           <p className="mono dim split__label" data-reveal>(A) Who Are We</p>
           <div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="numbers wrap panel theme-volt" aria-labelledby="num-h">
+      <section className="numbers wrap panel theme-light tint" aria-labelledby="num-h">
         <div className="numbers__head">
           <p className="mono dim" data-reveal>(Some Numbers)</p>
           <Lines id="num-h" className="h-lg" lines={[<>Our <em className="serif">Satisfied</em> Performance</>]} />

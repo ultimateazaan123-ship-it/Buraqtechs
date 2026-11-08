@@ -1,9 +1,10 @@
 import { testimonial } from "@/lib/content";
 import Lines from "./Lines";
+import Trace from "./Trace";
 
 export default function Testimonial() {
   return (
-    <section className="testi wrap panel theme-peri" aria-labelledby="testi-h">
+    <section className="testi wrap panel theme-light tint" aria-labelledby="testi-h">
       <div className="testi__meta mono" data-reveal>
         <span>(Client voice)</span>
         <span>★★★★★</span>
@@ -13,6 +14,7 @@ export default function Testimonial() {
       </svg>
       <Lines id="testi-h" className="testi__title" lines={["Amazing Designs", <><em className="serif">and</em> Quality Work!</>]} />
       <blockquote className="testi__quote" data-reveal style={{ ["--d" as string]: 200 }}>
+        <Trace offset={2} />
         <p>“{testimonial.quote}”</p>
         <footer>
           <img src="/clients/logosolarpngblk-1-300x100.png" alt="" width={120} height={40} loading="lazy" />
