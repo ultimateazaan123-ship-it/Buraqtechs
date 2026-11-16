@@ -1,4 +1,4 @@
-import { nav, site } from "@/lib/content";
+import { nav, services, site } from "@/lib/content";
 import BackToTop from "./BackToTop";
 import Clock from "./Clock";
 import { TLink } from "./Transition";
@@ -14,6 +14,19 @@ export default function Footer() {
           </p>
         </div>
         <div className="ftr__col" data-reveal style={{ ["--d" as string]: 80 }}>
+          <p className="mono dim">Services</p>
+          <ul>
+            {/* each links to its own row in the home page services list */}
+            {services.map((s) => (
+              <li key={s.id}>
+                <TLink href={`/#service-${s.id}`} className="ulink">
+                  {s.id === "research" ? "R&D & Product Hunting" : s.title}
+                </TLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="ftr__col" data-reveal style={{ ["--d" as string]: 140 }}>
           <p className="mono dim">Company</p>
           <ul>
             {nav.map((n) => (
@@ -25,7 +38,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className="ftr__col" data-reveal style={{ ["--d" as string]: 160 }}>
+        <div className="ftr__col" data-reveal style={{ ["--d" as string]: 200 }}>
           <p className="mono dim">Get In Touch</p>
           <ul>
             <li>{site.address}</li>
@@ -37,7 +50,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="ftr__col" data-reveal style={{ ["--d" as string]: 240 }}>
+        <div className="ftr__col" data-reveal style={{ ["--d" as string]: 260 }}>
           <p className="mono dim">Social</p>
           <ul>
             {site.socials.map((s) => (

@@ -36,8 +36,8 @@ export default function Home() {
         <p className="mono dim" data-reveal>(02) Approach</p>
         <ScrollText
           className="statement__text"
-          text="We take your company from scratch, create its identity from the ground up and make it an ideal brand for target clients."
-          accent={[4, 5, 8, 17, 18]}
+          text="Our methodology bridges the gap between market intelligence and robust engineering. We begin with deep-dive R&D and product hunting to validate your niche, blueprint your digital architecture, and deploy tailored solutions through agile, transparent workflows."
+          accent={[6, 7, 9, 10, 17, 18]}
         />
       </section>
 

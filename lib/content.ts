@@ -4,7 +4,7 @@ export const site = {
   phone: "+923313863069",
   phoneDisplay: "+92 331 386 3069",
   email: "contact@buraqtechs.com",
-  address: "Gulistan-e-Johar Block, opposite Karachi University, Karachi.",
+  address: "B132-A1, Block 1 Gulistan-e-Johar, Karachi",
   coords: "24.9204° N, 67.1344° E",
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/company/buraqtechs" },
@@ -20,9 +20,14 @@ export const nav = [
   { href: "/contact/", label: "Contact" },
 ];
 
-export type ServiceId = "design" | "development" | "marketing" | "social" | "ecommerce" | "amazon";
+export type ServiceId = "research" | "design" | "development" | "marketing" | "social" | "ecommerce" | "amazon";
 
 export const services: { id: ServiceId; title: string; text: string }[] = [
+  {
+    id: "research",
+    title: "Research & Product Hunting",
+    text: "We eliminate guesswork by executing rigorous data-driven R&D and product hunting. Our team analyzes market gaps, evaluates competitor landscapes, and validates high-potential products to ensure your venture launches with a proven competitive edge.",
+  },
   {
     id: "design",
     title: "Design",
@@ -78,7 +83,7 @@ export const heroText =
 export const testimonial = {
   title: "Amazing Designs and Quality Work!",
   quote:
-    "Quality Work, Happy with all your services, website, hosting, logo designing and Marketing Campaigns 😊.",
+    "Quality Work, Happy with all your services, website, hosting, logo designing and Marketing Campaigns.",
   name: "M.Jawaid",
   role: "CEO, Mechatronics",
 };
@@ -89,7 +94,7 @@ export const about = {
   who: "IT Business and full-service Digital Agency, which focuses on innovative, IT and digital solutions that are holistic. We take your company from the ground up, create its reputation from the ground up and make it an ideal brand for your target clients.",
   mission:
     "We recognize that the brands and companies out there don't want a company that doesn't know how to do it. This is why we are a creative partner to get the business going and provide the cash flow for all the specifications the customer needs.",
-  whatWeDo: ["UI UX Design", "Website Development", "Marketing", "Social Media", "eCommerce Store", "Tech Support"],
+  whatWeDo: ["Research & Product Hunting", "UI UX Design", "Website Development", "Marketing", "Social Media", "eCommerce Store", "Tech Support"],
   process: [
     {
       name: "Discover",

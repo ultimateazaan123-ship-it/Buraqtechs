@@ -10,7 +10,7 @@ import { services } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Design, development, marketing, social media, eCommerce and Amazon services by Buraqtechs.",
+  description: "Research & product hunting, design, development, marketing, social media, eCommerce and Amazon services by Buraqtechs.",
 };
 
 export default function ServicesPage() {
@@ -22,7 +22,7 @@ export default function ServicesPage() {
         title={["We provide", <>a wide range <em className="serif">of</em></>, "Services"]}
         kicker="Fastest And Most Reliable Growth"
         text="We take your company from scratch, create its identity from the ground up and make it an ideal brand for your target clients."
-        readout={["06", "Disciplines"]}
+        readout={[String(services.length).padStart(2, "0"), "Disciplines"]}
       />
 
       <ServicesRail />

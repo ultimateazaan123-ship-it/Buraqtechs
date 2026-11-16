@@ -2,6 +2,15 @@ import type { ServiceId } from "@/lib/content";
 
 // Hand-built line glyphs; strokes draw in via CSS when the parent is revealed/hovered.
 const paths: Record<ServiceId, React.ReactNode> = {
+  research: (
+    <>
+      <circle cx="52" cy="52" r="32" />
+      <path d="M75 75 104 104" />
+      <path d="M38 64V54M50 64V44M62 64V36" className="g-acc" />
+      <path d="M30 70h44" className="g-thin" />
+      <path d="M96 16v12M90 22h12" className="g-thin" />
+    </>
+  ),
   design: (
     <>
       <path d="M14 96C34 40 70 92 106 26" />

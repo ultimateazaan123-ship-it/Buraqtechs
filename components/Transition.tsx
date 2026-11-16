@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ComponentProps, type MouseEvent } from "react";
 import { nav } from "@/lib/content";
 import { scanReveals } from "@/lib/reveal";
-import { scroller, scrollToTop } from "@/lib/scroller";
+import { scroller, scrollToHash, scrollToTop } from "@/lib/scroller";
 
 type Phase = "idle" | "cover" | "reveal";
 const Ctx = createContext<(href: string) => void>(() => {});
@@ -31,15 +31,17 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
     scanReveals();
   }, []);
 
-  // A route finished rendering underneath the curtain: jump to top, then lift it.
+  // A route finished rendering underneath the curtain: jump to top (or the #section), then lift it.
   useEffect(() => {
     if (!pending.current) {
       scanReveals();
       return;
     }
+    const hash = pending.current.split("#")[1];
     pending.current = null;
-    scrollToTop();
     scroller.lenis?.start();
+    scrollToTop();
+    if (hash) scrollToHash(hash, true);
     requestAnimationFrame(() => {
       setPhase("reveal");
       setTimeout(scanReveals, 180);
@@ -50,7 +52,9 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
   const navigate = useCallback(
     (href: string) => {
       if (pending.current) return;
-      if (norm(href) === norm(pathname)) {
+      const [path, hash] = href.split("#");
+      if (norm(path) === norm(pathname)) {
+        if (hash && scrollToHash(hash)) return;
         scroller.lenis ? scroller.lenis.scrollTo(0, { duration: 1.2 }) : window.scrollTo({ top: 0, behavior: "smooth" });
         return;
       }

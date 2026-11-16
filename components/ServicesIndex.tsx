@@ -24,6 +24,7 @@ export default function ServicesIndex() {
       {services.map((s, i) => (
         <li
           key={s.id}
+          id={`service-${s.id}`}
           // Active state lives in a data attribute: React rewriting className would wipe the reveal's "is-in".
           className="sidx__row"
           data-active={active === s.id || undefined}
