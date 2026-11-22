@@ -17,6 +17,7 @@ export const nav = [
   { href: "/", label: "Home" },
   { href: "/about/", label: "About" },
   { href: "/services/", label: "Services" },
+  { href: "/branding/", label: "Branding" },
   { href: "/contact/", label: "Contact" },
 ];
 
@@ -156,4 +157,46 @@ export const about = {
 export const contact = {
   kicker: "Contact for Premium Business Services",
   text: "Please feel free to contact us if you have any professional ideas, requests or feedback about our growing services or products.",
+};
+
+export type BrandIconName =
+  | "search"
+  | "pencil"
+  | "machine"
+  | "inspect"
+  | "camera"
+  | "launch"
+  | "rocket"
+  | "bulb"
+  | "chart"
+  | "shirt"
+  | "laptop"
+  | "chat"
+  | "megaphone"
+  | "headset";
+
+// Clothing-brand building service ("Branding" page). Step names come from the 7-step graphic.
+export const branding = {
+  kicker: "More Than Marketing",
+  lead: "Product-Based Marketing: From Concept to Customer.",
+  closing: ["Your Vision.", "Our Execution."],
+  closingSub: "Complete Brand Launch Services.",
+  journey: [
+    { icon: "search", title: "Product Hunting", tag: "Market Research & Trends", text: "We track demand, trends and competitors to find the products worth launching." },
+    { icon: "pencil", title: "Designing", tag: "Patterns & Tech-packs", text: "Your ideas become production-ready patterns and detailed tech-packs." },
+    { icon: "machine", title: "Stitching & Sampling", tag: "Production", text: "Samples are stitched, fitted and refined until every detail is right." },
+    { icon: "inspect", title: "Quality Control", tag: "Final Inspection", text: "Every piece is inspected before it carries your label." },
+    { icon: "camera", title: "Content Creation", tag: "Photography & Cataloging", text: "Studio photography and catalogues that let the product sell itself." },
+    { icon: "launch", title: "Launching", tag: "Website & Shop Setup", text: "Your online store and shop channels go live, fully set up." },
+    { icon: "rocket", title: "Performance Marketing", tag: "Scaling Sales", text: "Data-driven campaigns that turn a launch into lasting sales." },
+  ] as { icon: BrandIconName; title: string; tag: string; text: string }[],
+  launch: [
+    { icon: "shirt", title: "A-Z Production", tag: "Stitching, Photo, Print", text: "One team for the whole run: stitching, printing and product photography, managed end to end so your collection arrives launch-ready.", featured: true },
+    { icon: "bulb", title: "Plan & Strategy", tag: "Step 01", text: "Positioning, pricing and a launch roadmap built around your audience." },
+    { icon: "chart", title: "R&D & Market Fit", tag: "Step 02", text: "We validate the niche and the product before a single piece is produced." },
+    { icon: "laptop", title: "Web Development", tag: "Step 04", text: "A fast, conversion-focused store that is ready to sell from day one." },
+    { icon: "chat", title: "Consultation", tag: "Step 05", text: "Direct access to our team for decisions on product, pricing and growth." },
+    { icon: "megaphone", title: "Marketing Service", tag: "Step 06", text: "Social, content and paid campaigns that put the brand in front of buyers." },
+    { icon: "headset", title: "Customer Support", tag: "Step 07", text: "Support that keeps customers happy and coming back after launch." },
+  ] as { icon: BrandIconName; title: string; tag: string; text: string; featured?: boolean }[],
 };

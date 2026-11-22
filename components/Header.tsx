@@ -49,7 +49,7 @@ export default function Header() {
           </TLink>
 
           <nav className="hdr__nav" aria-label="Primary">
-            {nav.slice(0, 3).map((n) => (
+            {nav.filter((n) => n.href !== "/contact/").map((n) => (
               <TLink key={n.href} href={n.href} className={`navlink${norm(pathname) === n.href ? " is-active" : ""}`}>
                 <span className="roll" data-t={n.label}>
                   <span>{n.label}</span>
