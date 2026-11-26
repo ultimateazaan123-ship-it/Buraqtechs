@@ -2,6 +2,7 @@
 
 Next.js (App Router) site, statically exported: every page ships as pre-rendered HTML.
 
+
 ```bash
 npm install
 npm run dev       # http://localhost:3000
