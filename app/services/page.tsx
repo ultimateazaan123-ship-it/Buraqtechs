@@ -10,7 +10,7 @@ import { services } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Research & product hunting, design, development, marketing, social media, eCommerce and Amazon services by Buraqtechs.",
+  description: "Research & product hunting, design, development, marketing, social media and E-Commerce services by Buraqtechs.",
 };
 
 export default function ServicesPage() {

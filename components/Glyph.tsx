@@ -55,13 +55,6 @@ const paths: Record<ServiceId, React.ReactNode> = {
       <path d="M30 92h60" className="g-thin" />
     </>
   ),
-  amazon: (
-    <>
-      <path d="M60 14 102 36v48L60 106 18 84V36z" />
-      <path d="M18 36l42 22 42-22M60 58v48" className="g-thin" />
-      <path d="M38 25l42 22v16" className="g-acc" />
-    </>
-  ),
 };
 
 export default function Glyph({ id, className = "" }: { id: ServiceId; className?: string }) {

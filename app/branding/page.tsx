@@ -12,7 +12,7 @@ import { TLink } from "@/components/Transition";
 import { branding } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Branding",
+  title: "Launch Your Brand",
   description:
     "Buraqtechs builds clothing brands from scratch (A-Z): product hunting, design, stitching and sampling, quality control, content, launch and performance marketing.",
 };
@@ -27,7 +27,7 @@ export default function BrandingPage() {
         <div className="wrap bhero__in">
           <div className="bhero__copy">
             <p className="mono phero__label" data-reveal>
-              <span className="dim">(04)</span> Branding
+              <span className="dim">(04)</span> Launch your brand
             </p>
             <p className="mono kicker bhero__kicker" data-reveal style={{ "--d": 80 } as CSSProperties}>
               <span className="kicker__dot" /> {branding.kicker}

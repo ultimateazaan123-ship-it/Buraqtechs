@@ -17,11 +17,11 @@ export const nav = [
   { href: "/", label: "Home" },
   { href: "/about/", label: "About" },
   { href: "/services/", label: "Services" },
-  { href: "/branding/", label: "Branding" },
+  { href: "/branding/", label: "Launch your brand" },
   { href: "/contact/", label: "Contact" },
 ];
 
-export type ServiceId = "research" | "design" | "development" | "marketing" | "social" | "ecommerce" | "amazon";
+export type ServiceId = "research" | "design" | "development" | "marketing" | "social" | "ecommerce";
 
 export const services: { id: ServiceId; title: string; text: string }[] = [
   {
@@ -51,13 +51,8 @@ export const services: { id: ServiceId; title: string; text: string }[] = [
   },
   {
     id: "ecommerce",
-    title: "eCommerce",
-    text: "The Secret to Effectively Managing an Ecommerce Business in the best way to Enable you and your Desired Audience to achieve their target.",
-  },
-  {
-    id: "amazon",
-    title: "Amazon",
-    text: "A-Z e-Commerce solution for PL & Wholesale Businesses",
+    title: "E-Commerce",
+    text: "The Secret to Effectively Managing an E-Commerce Business in the best way to Enable you and your Desired Audience to achieve their target.",
   },
 ];
 
@@ -95,7 +90,7 @@ export const about = {
   who: "IT Business and full-service Digital Agency, which focuses on innovative, IT and digital solutions that are holistic. We take your company from the ground up, create its reputation from the ground up and make it an ideal brand for your target clients.",
   mission:
     "We recognize that the brands and companies out there don't want a company that doesn't know how to do it. This is why we are a creative partner to get the business going and provide the cash flow for all the specifications the customer needs.",
-  whatWeDo: ["Research & Product Hunting", "UI UX Design", "Website Development", "Marketing", "Social Media", "eCommerce Store", "Tech Support"],
+  whatWeDo: ["Research & Product Hunting", "UI UX Design", "Website Development", "Marketing", "Social Media", "E-Commerce Store", "Tech Support"],
   process: [
     {
       name: "Discover",
@@ -175,7 +170,7 @@ export type BrandIconName =
   | "megaphone"
   | "headset";
 
-// Clothing-brand building service ("Branding" page). Step names come from the 7-step graphic.
+// Clothing-brand building service ("Launch your brand" page, /branding/). Step names come from the 7-step graphic.
 export const branding = {
   kicker: "More Than Marketing",
   lead: "Product-Based Marketing: From Concept to Customer.",

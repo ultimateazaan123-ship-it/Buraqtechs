@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.buraqtechs.com"),
   title: { default: "Buraqtechs | We Create & Scale Your Business Digitally", template: "%s | Buraqtechs" },
   description:
-    "IT business and full-service digital agency in Karachi. Design, development, marketing, social media, eCommerce and Amazon solutions.",
+    "IT business and full-service digital agency in Karachi. Design, development, marketing, social media and E-Commerce solutions.",
   openGraph: { type: "website", siteName: "Buraqtechs", images: ["/brand/logo.png"] },
 };
 
